@@ -1,6 +1,50 @@
-#ticker{
-    background-color: gray;
-    color:green;
+#ticker {
+    color: green;
+    text-align: center;
+}
+
+.coinmarketcap-currency-widget {
+    display: inline-block;
     width: 300px;
-    
+    background-color: lightblue;
+}
+
+#front-page {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: royalblue;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+}
+
+#initial-balance {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+.title-text{
+    text-align: center;
+    font-size: 40px;
+    color: greenyellow;
+}
+#menu{
+    text-align: center;
+}
+#forms{
+    text-align: center;
+}
+#chart{
+    float: right;
+    width: 25%;
 }

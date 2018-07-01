@@ -26,6 +26,8 @@ body {
     height: 100%;
     width: 100%;
     background-color: orange;
+    font-family: "Bookman Old Style";
+
 }
 
 #initial-balance {

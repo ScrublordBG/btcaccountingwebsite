@@ -11,8 +11,8 @@ $(document).ready(function () {
     $('#chart').hide();
     window.setInterval(function () {
         if (tempBalance != btcBalance) {
-            $('#menu').html("<p>BTC Balance: " + btcBalance + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>");
-            $('#myPopup').html(btcAdd); 
+            $('#menu').html("<p>BTC Balance: " + btcBalance.toFixed(5) + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>");
+            $('#myPopup').html(btcAdd).css('color',btcAdd>0?'green':'red'); 
             $('#myPopup').fadeIn(10, function(){
                 $('#myPopup').fadeOut(500);
             });
@@ -28,10 +28,6 @@ $(document).ready(function () {
         $('#front-page').slideUp(1000);
         $('#chart').fadeIn(2000);
         console.log(btcBalance);
-    });
-    $('#deduction').on('submit', function (e) {
-        e.preventDefault();
-        btcBalance -= btcAdd = +$('#deduct').val();
     });
     $('#addition').on('submit', function (e) {
         e.preventDefault();

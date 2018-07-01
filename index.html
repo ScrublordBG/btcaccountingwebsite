@@ -22,28 +22,49 @@
         <div class="coinmarketcap-currency-widget" data-currencyid="1831" data-base="USD" data-secondary="" data-ticker="true" data-rank="false"
             data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
     </div>
-    <div id="menu"></div>
-    <div id="front-page">
-        <p class="title-text">Welcome to your personal Bitcoin(BTC) funds manager.</p>
-        <p class="title-text">Please enter your current BTC balance.</p>
-        <form id="initial-balance">
-            <input type="text" id="initial-balance-input" placeholder="Initial investment" />
-        </form>
-    </div>
-    <div id="forms">
-        <form id="deduction" class>
-            <input type="text" id="deduct" placeholder="Spend BTC" />
-        </form>
-        <form id="addition">
-            <input type="text" id="add" placeholder="Add BTC" />
+    <hr>
+    <div id="mainPage">
+        <div id="news-ticker">
+            <div class="btcwdgt-news" bw-cur="usd"></div>
+        </div>
+        <div id="centered">
+            <div id="menu">
+            </div>
+            <span class="popuptext" id="myPopup">Popup text...</span>
 
-        </form>
+            <div id="front-page">
+                <p class="title-text">Welcome to your personal Bitcoin(BTC) funds manager.</p>
+                <p class="title-text">Please enter your current BTC balance.</p>
+                <form id="initial-balance">
+                    <input type="text" id="initial-balance-input" placeholder="Initial investment" />
+                </form>
+            </div>
+            <div id="buttons">
+                <button type="button" id="add-one" value=1>1</button>
+                <button type="button" id="add-zerotwentyfive" value=0.25>0.25</button>
+                <button type="button" id="remove-one" value=-1>-1</button>
+                <button type="button" id="remove-zerotwentyfive" value=-0.25>-0.25</button>
+
+
+
+            </div>
+            <div id="forms">
+                <form id="deduction" class>
+                    <input type="text" id="deduct" placeholder="Spend BTC" />
+                </form>
+                <form id="addition">
+                    <input type="text" id="add" placeholder="Add BTC" />
+
+                </form>
+
+            </div>
+
+        </div>
         <div id="chart">
             <div class="btcwdgt-chart"></div>
         </div>
     </div>
-    <hr></hr>
-
+    <hr>
 
 
 
@@ -63,4 +84,12 @@
             N.parentNode.insertBefore(I, N);
         }, false)
     })(document, 'script', 'https://widgets.bitcoin.com/widget.js', 'btcwdgt');
+</script>
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+
+    }
 </script>

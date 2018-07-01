@@ -44,6 +44,9 @@ body {
 
 #menu {
     text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: lightblue;
    
 }
 #centered{
@@ -51,6 +54,7 @@ body {
     margin: 0 auto;
     display: inline-block;
     position: absolute;
+
 }
 
 #forms {
@@ -88,7 +92,7 @@ body {
     padding: 8px 0;
     position: absolute;
     z-index: 0;
-    bottom: 87%;
+    bottom: 84%;
     left: 50%;
     margin-left: -80px;
 }

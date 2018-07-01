@@ -11,7 +11,7 @@ $(document).ready(function () {
     $('#chart').hide();
     window.setInterval(function () {
         if (tempBalance != btcBalance) {
-            $('#menu').html("<p>BTC Balance: " + btcBalance.toFixed(5) + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>");
+            $('#menu').html("<p>BTC Balance: " + btcBalance.toFixed(5) + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>")
             $('#myPopup').html(btcAdd).css('color',btcAdd>0?'green':'red'); 
             $('#myPopup').fadeIn(10, function(){
                 $('#myPopup').fadeOut(500);

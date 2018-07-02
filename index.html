@@ -7,6 +7,7 @@
     <script src "http://malsup.github.io/jquery.corner.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="modal.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,6 +24,7 @@
                 <span></span>
             </span>
         </form>
+        <button type="button" id="login">Restore previous session</button>
     </div>
     <div id="ticker">
         <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
@@ -36,7 +38,7 @@
             data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
     </div>
     <div id="main-page">
-            <hr>
+        <hr>
         <div id="news-ticker">
             <div class="btcwdgt-news" bw-cur="usd"></div>
         </div>
@@ -48,7 +50,7 @@
             <div id="buttons">
                 <button type="button" id="add-one" value=1>1</button>
                 <button type="button" id="add-zerotwentyfive" value=0.25>0.25</button>
-               
+
                 <button type="button" id="remove-zerotwentyfive" value=-0.25>-0.25</button>
                 <button type="button" id="remove-one" value=-1>-1</button>
 
@@ -70,6 +72,13 @@
             <div class="btcwdgt-chart"></div>
         </div>
     </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+        </div>
+
+    </div>
+    <div id="information"></div>
 
 
     <script src="script.js"></script>

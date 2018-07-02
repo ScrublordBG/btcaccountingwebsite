@@ -1,6 +1,6 @@
 #ticker {
-    color: green;
     text-align: center;
+    display:none;
 }
 
 .coinmarketcap-currency-widget {
@@ -173,6 +173,10 @@ button:active {
 #login {
     padding: 10px;
     margin-top: 10px;
+}
+
+#information {
+    display: none;
 }
 
 #price-information,

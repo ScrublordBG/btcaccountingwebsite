@@ -35,9 +35,10 @@ $(document).ready(function () {
     $("#initial-balance").on('submit', function (e) {
         e.preventDefault();
         btcBalance = btcAdd = +$('#initial-balance-input').val();
-        $('#front-page').slideUp(1000);
-        $('#main-page').fadeIn(2000);
-        $('#ticker').fadeIn(2000);
+        $('#front-page').slideUp(1000,function(){
+        $('#main-page').fadeIn(1500);
+        $('#ticker').fadeIn(1500);
+        });
         console.log(btcBalance);
     });
     $('#addition').on('submit', function (e) {

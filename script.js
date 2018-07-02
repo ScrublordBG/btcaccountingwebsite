@@ -10,7 +10,7 @@ $(document).ready(function () {
          console.log(btcValue);
      });*/
 
-    $('#chart').hide();
+    $('#ticker').hide() 
     window.setInterval(function () {
         btcValue = +$('.btcwdgt-body').find('.price').find('.p-wrap').find('p').html();
         if (tempBalance != btcBalance) {
@@ -23,9 +23,9 @@ $(document).ready(function () {
         }
         if (tempValue != btcValue){
             $('#menu').html("<p>BTC Balance: " + btcBalance.toFixed(5) + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>");
-            $('#myPopup').html(btcValue*btcBalance).css('color', btcValue > tempValue ? 'green' : 'red').css('bottom','73%');
+            $('#myPopup').html((btcValue*btcBalance-tempValue*btcBalance).toFixed(2)+"$").css('color', btcValue > tempValue ? 'green' : 'red').css('bottom','75%');
             $('#myPopup').fadeIn(10, function () {
-                $('#myPopup').fadeOut(1500);
+                $('#myPopup').fadeOut(2500);
             });
             tempValue = btcValue;
 
@@ -36,7 +36,8 @@ $(document).ready(function () {
         e.preventDefault();
         btcBalance = btcAdd = +$('#initial-balance-input').val();
         $('#front-page').slideUp(1000);
-        $('#chart').fadeIn(2000);
+        $('#main-page').fadeIn(2000);
+        $('#ticker').fadeIn(2000);
         console.log(btcBalance);
     });
     $('#addition').on('submit', function (e) {

@@ -16,7 +16,8 @@
     top: 0;
     overflow: hidden;
     position: fixed;
-    background-color: royalblue;
+    background-color: #10abff;
+    text-align: center;
 }
 
 html,
@@ -25,16 +26,10 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: orange;
+    background-color: #f0b30c;
     font-family: "Bookman Old Style";
-
 }
 
-#initial-balance {
-    position: absolute;
-    top: 45%;
-    left: 45%;
-}
 
 .title-text {
     text-align: center;
@@ -47,14 +42,13 @@ body {
     border: 2px solid black;
     border-radius: 25px;
     background-color: lightblue;
-   
 }
-#centered{
+
+#centered {
     width: 33%;
     margin: 0 auto;
     display: inline-block;
     position: absolute;
-
 }
 
 #forms {
@@ -71,16 +65,18 @@ body {
     text-align: center;
     padding: 25px;
 }
-#mainPage{
+
+#main-page {
     display: inline-block;
     width: 100%;
+    display: none;
 }
-#news-ticker{
+
+#news-ticker {
     display: inline-block;
     width: 33%;
     height: 100%;
 }
-
 
 /* The actual popup (appears on top) */
 
@@ -95,7 +91,9 @@ body {
     bottom: 84%;
     left: 50%;
     margin-left: -80px;
+    font-size: 18px;
 }
+
 button {
     background: transparent;
     border: 0;
@@ -103,43 +101,55 @@ button {
     cursor: pointer;
     outline: 0;
     -webkit-appearance: none;
-  }
-  
-  /* Custom */
-  button {
+}
+
+/* Custom */
+
+button {
     display: inline-block;
-    padding: 20px 38px;
+    padding: 10px 20px;
     top: 0;
     font-size: 30px;
     font-family: "Open Sans", Helvetica;
     border-radius: 4px;
-    border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
-    background: rgba( 22, 230, 137, 1 );
+    border-bottom: 1px solid rgba( 28, 227, 125, 0.5);
+    background: rgba( 22, 230, 137, 1);
     color: #fff;
-    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
-    
-    
+    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1);
     -webkit-transition: all 0.2s ease;
-       -moz-transition: all 0.2s ease;
-        -ms-transition: all 0.2s ease;
-            transition: all 0.2s ease;
-  }
-  
-  button:hover {
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+button:hover {
     top: -10px;
-    box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
-    
+    box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2);
     -webkit-transform: rotateX(20deg);
-       -moz-transform: rotateX(20deg);
-        -ms-transform: rotateX(20deg);
-            transform: rotateX(20deg);
-  }
-  
-  button:active {
+    -moz-transform: rotateX(20deg);
+    -ms-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+}
+
+button:active {
     top: 0px;
-    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
-    background: rgba( 20, 224, 133, 1 );
-  }
-  #remove-one, #remove-zerotwentyfive{
-      background: red;
-  }
+    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0);
+    background: rgba( 20, 224, 133, 1);
+}
+
+#remove-one,
+#remove-zerotwentyfive {
+    background: red;
+}
+#add{
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+#initial-balance-input{
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+}
+

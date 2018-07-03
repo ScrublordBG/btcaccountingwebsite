@@ -57,7 +57,6 @@ $(document).ready(function () {
                 $('#price-information').append("<p " + textColor + ">" + currentTime + " - " + btcValue.toFixed(2) + "$" + (btcValue > tempValue ? '&#x25B2;' : '&#x25BC;') + "</p>");
 
             }
-            localStorage.setItem('lastBtcPrice', btcValue);
             tempValue = btcValue;
 
 
@@ -104,8 +103,10 @@ $(document).ready(function () {
         $('#front-page').slideUp(1500, function () {
             $('#main-page, #ticker, #information').fadeIn(1500);
         });
-        var change = btcValue > +localStorage.getItem('lastBtcPrice') ? "made " : "lost ";
-        $('.modal-content').append("<p> Welcome back, you've " + change + ((btcValue - (+localStorage.getItem('lastBtcPrice'))) * btcBalance).toFixed(2) + "$ since you've last logged in</p>");
+        var change = btcValue >= +localStorage.getItem('lastBtcPrice') ? "made " : "lost ";
+        var oldPrice = +localStorage.getItem('lastBtcPrice');
+        console.log(oldPrice);
+        $('.modal-content').append("<p> Welcome back, you've " + change + ((btcValue - oldPrice) * btcBalance).toFixed(2) + "$ since you've last logged in</p>");
         $('#myModal').css('opacity', 0).slideDown(1500).animate({
             opacity: 1
         }, {

@@ -6,16 +6,21 @@
 .coinmarketcap-currency-widget {
     display: inline-block;
     width: 300px;
-    background-color: lightblue;
+    background: #00d2ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #928DAB, #00d2ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 2px solid black;
     border-radius: 10px;
     padding: 2px;
     margin-top: 5px;
 }
-.coinmarketcap-currency-widget:hover{
+
+.coinmarketcap-currency-widget:hover {
     background: rgb(69, 158, 231);
     cursor: pointer;
-    
 }
 
 #front-page {
@@ -116,6 +121,7 @@ body {
     left: 50%;
     margin-left: -80px;
     font-size: 18px;
+    display: none;
 }
 
 button {
@@ -214,7 +220,8 @@ button:active {
     color: red;
     font-size: 25px;
 }
-#price-checker{
+
+#price-checker {
     display: none;
     position: absolute;
     left: 68%;
@@ -231,4 +238,37 @@ button:active {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #928DAB, #00d2ff);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#logo {
+    width: 350px;
+    height: 100px;
+    display: inline-block;
+}
+#github{
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    display: none;
+    margin-top: 22px;
+    background: #141E30;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30);
+    vertical-align: bottom;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#footer-text{
+    right:0;
+    bottom: 0;
+    color:gray;
+    display: inline-block;
+    position: absolute;
+    margin-right: 10px;
 }

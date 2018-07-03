@@ -92,19 +92,36 @@
         </div>
     </div>
 
+    <footer>
+        <hr>
 
-    <script src="script.js"></script>
-    <script>
-        (function (b, i, t, C, O, I, N) {
-            window.addEventListener('load', function () {
-                if (b.getElementById(C)) return;
-                I = b.createElement(i), N = b.getElementsByTagName(i)[0];
-                I.src = t;
-                I.id = C;
-                N.parentNode.insertBefore(I, N);
-            }, false)
-        })(document, 'script', 'https://widgets.bitcoin.com/widget.js', 'btcwdgt');
-    </script>
+        <a href="http://www.telerikacademy.com/">
+            <img id='logo' src='telerik-logo.png' />
+        </a>
+        <a href="https://github.com/ScrublordBG/btcaccountingwebsite">
+            <img id='github' src='github-logo.png' />
+        </a>
+        <p id="footer-text">© Boris Zhelev 2018. All rights reserved.</p>
+
+
+
+    </footer>
 </body>
+
+
+
+<script src="script.js"></script>
+<script>
+    (function (b, i, t, C, O, I, N) {
+        window.addEventListener('load', function () {
+            if (b.getElementById(C)) return;
+            I = b.createElement(i), N = b.getElementsByTagName(i)[0];
+            I.src = t;
+            I.id = C;
+            N.parentNode.insertBefore(I, N);
+        }, false)
+    })(document, 'script', 'https://widgets.bitcoin.com/widget.js', 'btcwdgt');
+</script>
+
 
 </html>

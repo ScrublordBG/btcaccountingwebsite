@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $('#myPopup').hide();
     var btcBalance = 0;
     var btcValue = +$('.btcwdgt-body').find('.price').find('.p-wrap').find('p').html();
     var btcAdd;
@@ -70,7 +69,7 @@ $(document).ready(function () {
         if (!isNaN($('#initial-balance-input').val())) {
             btcBalance = btcAdd = +$('#initial-balance-input').val();
             $('#front-page').slideUp(1000, function () {
-                $('#main-page, #ticker, #information').fadeIn(1500);
+                $('#main-page, #ticker, #information, footer').fadeIn(1500);
             });
         } else {
             $('#login-error').toggle('slow', function () {
@@ -105,7 +104,7 @@ $(document).ready(function () {
 
         btcBalance = +localStorage.getItem('lastBtcBalance');
         $('#front-page').slideUp(1500, function () {
-            $('#main-page, #ticker, #information').fadeIn(1500);
+            $('#main-page, #ticker, #information, footer').fadeIn(1500);
         });
         var change = btcValue >= +localStorage.getItem('lastBtcPrice') ? "made " : "lost ";
         var oldPrice = +localStorage.getItem('lastBtcPrice');

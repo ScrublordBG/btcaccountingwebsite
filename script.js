@@ -11,6 +11,9 @@ $(document).ready(function () {
          btcValue = result.USD.last;
          console.log(btcValue);
      });*/
+    if (localStorage.getItem('lastBtcBalance') == null) {
+        $('#login').hide();
+    }
 
     window.setInterval(function () {
         btcValue = +$('.btcwdgt-body').find('.price').find('.p-wrap').find('p').html();
@@ -23,9 +26,11 @@ $(document).ready(function () {
             var textColor = btcBalance > tempBalance ? "style='color:greenyellow;'" : "style='color:red;'"
             var currentTime = pad(new Date().getHours().toString()) + ":" + pad(new Date().getMinutes().toString()) + ":" + pad(new Date().getSeconds());
             if (balanceCounter < 9) {
-                $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + "&#579;" + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");
+                if (balanceCounter > 0) {
+                    $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + "&#579;" + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");
+                }
                 balanceCounter++;
-            } else {
+            } else if (balanceCounter > 0) {
                 balanceCounter = 0;
                 $('#balance-information').html("<p style=\"font-size: 25px;\">BTC Balance Changes</p>");
                 $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");

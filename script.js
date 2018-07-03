@@ -59,15 +59,31 @@ $(document).ready(function () {
     }, 50);
     $("#initial-balance").on('submit', function (e) {
         e.preventDefault();
-        btcBalance = btcAdd = +$('#initial-balance-input').val();
-        $('#front-page').slideUp(1000, function () {
-            $('#main-page, #ticker, #information').fadeIn(1500);
-        });
-        console.log(btcBalance);
+        if (!isNaN($('#initial-balance-input').val())) {
+            btcBalance = btcAdd = +$('#initial-balance-input').val();
+            $('#front-page').slideUp(1000, function () {
+                $('#main-page, #ticker, #information').fadeIn(1500);
+            });
+        } else {
+            $('#login-error').toggle('slow', function () {
+                setTimeout(function () {
+                    $('#login-error').toggle('slow');
+                }, 3000);
+            });
+        }
     });
     $('#addition').on('submit', function (e) {
         e.preventDefault();
-        btcBalance += btcAdd = +$('#add').val();
+        if (!isNaN($('#add').val())) {
+            btcBalance += btcAdd = +$('#add').val();
+        } else {
+            $('#add-error').toggle('slow', function () {
+                setTimeout(function () {
+                    $('#add-error').toggle('slow');
+                }, 3000);
+            });
+
+        }
 
     });
     $('#add-one, #add-zerotwentyfive, #remove-one, #remove-zerotwentyfive').click(function () {
@@ -82,7 +98,7 @@ $(document).ready(function () {
         });
         var change = btcValue > +localStorage.getItem('lastBtcPrice') ? "made " : "lost ";
         $('.modal-content').append("<p> Welcome back, you've " + change + ((btcValue - (+localStorage.getItem('lastBtcPrice'))) * btcBalance).toFixed(2) + "$ since you've last logged in</p>");
-        $('#myModal').css('display', 'block').css('display','none').fadeIn(1500);
+        $('#myModal').css('display', 'block').css('display', 'none').fadeIn(1500);
 
     });
     $('#myModal').click(function () {

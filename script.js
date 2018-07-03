@@ -122,10 +122,6 @@ $(document).ready(function () {
         $('#myModal').fadeOut('slow');
     });
 
-    $(window).click(function () {
-        $('#myModal').fadeOut('slow');
-    });
-
     function pad(n) {
         return n < 10 ? '0' + n : n
     }

@@ -12,6 +12,11 @@
     padding: 2px;
     margin-top: 5px;
 }
+.coinmarketcap-currency-widget:hover{
+    background: rgb(69, 158, 231);
+    cursor: pointer;
+    
+}
 
 #front-page {
     height: 100%;
@@ -193,7 +198,7 @@ button:active {
     text-align: center;
     display: inline-block;
     vertical-align: top;
-    height: 435px;
+    height: 400px;
     background: #00d2ff;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);

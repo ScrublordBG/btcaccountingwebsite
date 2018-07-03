@@ -17,14 +17,14 @@ $(document).ready(function () {
 
     window.setInterval(function () {
         btcValue = +$('.btcwdgt-body').find('.price').find('.p-wrap').find('p').html();
+        var textColor = btcBalance > tempBalance ? "style='color:greenyellow;'" : "style='color:red;'"
+        var currentTime = pad(new Date().getHours().toString()) + ":" + pad(new Date().getMinutes().toString()) + ":" + pad(new Date().getSeconds());
         if (tempBalance != btcBalance) {
             $('#menu').html("<p>BTC Balance: " + btcBalance.toFixed(5) + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>");
             $('#myPopup').html(btcAdd).css('color', btcAdd > 0 ? 'greenyellow' : 'red').css('bottom', '87%').css('font-size', '20px');
             $('#myPopup').fadeIn(10, function () {
                 $('#myPopup').fadeOut(500);
             });
-            var textColor = btcBalance > tempBalance ? "style='color:greenyellow;'" : "style='color:red;'"
-            var currentTime = pad(new Date().getHours().toString()) + ":" + pad(new Date().getMinutes().toString()) + ":" + pad(new Date().getSeconds());
             if (balanceCounter < 9) {
                 if (balanceCounter > 0) {
                     $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + "&#579;" + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");

@@ -39,6 +39,8 @@ $(document).ready(function () {
             tempBalance = btcBalance;
         }
         if (tempValue != btcValue) {
+            var textColor = btcValue >= tempValue ? "style='color:greenyellow;'" : "style='color:red;'"
+
             $('#menu').html("<p>BTC Balance: " + btcBalance.toFixed(5) + "&#579;" + "</p>" + "<p>USD Balance: " + (btcBalance * btcValue).toFixed(2) + "$</p>");
             $('#myPopup').html((btcValue * btcBalance - tempValue * btcBalance).toFixed(2) + "$").css('color', btcValue > tempValue ? 'greenyellow' : 'red').css('bottom', '70%').css('font-size', '20px');;
             $('#myPopup').fadeIn(10, function () {

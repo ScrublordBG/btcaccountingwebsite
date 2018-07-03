@@ -7,6 +7,10 @@
     display: inline-block;
     width: 300px;
     background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 5px;
 }
 
 #front-page {

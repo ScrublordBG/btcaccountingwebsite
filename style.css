@@ -186,6 +186,8 @@ button:active {
 
 #information {
     display: none;
+    height: 400px;
+    position: relative;
 }
 
 #price-information,
@@ -211,4 +213,20 @@ button:active {
     display: none;
     color: red;
     font-size: 25px;
+}
+#price-checker{
+    display: none;
+    position: absolute;
+    left: 68%;
+    bottom: 150px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 25px;
+    background: #00d2ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #928DAB, #00d2ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

@@ -31,10 +31,10 @@ $(document).ready(function () {
                     $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + "&#579;" + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");
                 }
                 balanceCounter++;
-            } else if (balanceCounter > 0) {
+            } else {
                 balanceCounter = 1;
                 $('#balance-information').html("<p style=\"font-size: 25px;\">BTC Balance Changes</p>");
-                $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");
+                $('#balance-information').append("<p " + textColor + ">" + currentTime + " - " + btcBalance.toFixed(2) + "&#579;" + (btcBalance > tempBalance ? '&#x25B2;' : '&#x25BC;') + "</p>");
             }
             localStorage.setItem('lastBtcBalance', btcBalance);
             tempBalance = btcBalance;
@@ -138,7 +138,7 @@ $(document).ready(function () {
         var currencyName = $(this).find("span:eq(0)").text();
         var currencyValue = span_val.substring(0, span_val.length - 4);
         var calculateValue = (btcValue / (+currencyValue) * btcBalance).toFixed(2);
-        $('#price-checker').fadeOut(500, function(){
+        $('#price-checker').fadeOut(500, function () {
             $('#price-checker').html("Your BTC is currently worth " + calculateValue + " " + currencyName).fadeIn(500);
         });
     });
